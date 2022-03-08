@@ -1,5 +1,34 @@
-<% @destinations.each do |d| %>
-  <h2><%= d.name %></h2>
-  <%= image_tag d.image %>
-  <p><%= link_to "Show destination", destination_path(d) %></p>
-<% end %>
+<div class="header">
+  <div class="container">
+    <img src="https://content.codecademy.com/courses/learn-rails/img/logo-1tm.svg" width="80">
+    <h1>BokenjiKan</h1>
+  </div>
+</div>
+
+<div class="tag">
+  <div class="container">
+    <h2 class="tag-title"><%= @tag.title %></h2>
+      <div class="cards row">
+      
+        <% @destinations.each do |d| %>
+          <div class="card col-xs-4">
+              <%= image_tag d.image %>
+              <h2><%= d.name %></h2>
+              <p><%= d.description %></p>
+              <%= link_to "See more", destination_path(d) %>
+          </div>
+        <% end %>
+
+      <!--
+      To do: Loop through destinations and display each one with this HTML
+      <div class="card col-xs-4">
+        destination's image goes here
+        <h2> destination's name goes here </h2>
+        <p> destination's description goes here </p>
+      </div>
+      -->
+
+    </div>
+
+  </div>
+</div>
