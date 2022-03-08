@@ -1,0 +1,5 @@
+<% @tags.each do |t| %>
+  <h2><%= t.title %></h2>
+  <%= image_tag t.image %><br>
+  <p><%= link_to "Show tag", tag_path(t) %></p>
+<% end %>
