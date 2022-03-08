@@ -1,5 +1,5 @@
 <% @destinations.each do |d| %>
   <h2><%= d.name %></h2>
   <%= image_tag d.image %>
-  <p><%= d.description %></p><br>
+  <p><%= link_to "Show destination", destination_path(d) %></p>
 <% end %>
